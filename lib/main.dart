@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final _pageWidgets = [
     const FeedPage(),
-    const MyPage(),
+    MyPage(),
   ];
 
   @override
