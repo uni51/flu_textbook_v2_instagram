@@ -8,6 +8,14 @@ class MyPage extends StatelessWidget {
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoSuexQoraIJ3Xc8Qde7Y_A-7v7vfwWxveA&usqp=CAU',
     'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg',
     'https://news.value-press.com/wp-content/uploads/interview_top_image_pakutaso.jpg',
+    'https://images.unsplash.com/photo-1694339251938-4f3309f582da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoSuexQoraIJ3Xc8Qde7Y_A-7v7vfwWxveA&usqp=CAU',
+    'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg',
+    'https://news.value-press.com/wp-content/uploads/interview_top_image_pakutaso.jpg',
+    'https://images.unsplash.com/photo-1694339251938-4f3309f582da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoSuexQoraIJ3Xc8Qde7Y_A-7v7vfwWxveA&usqp=CAU',
+    'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg',
+    'https://news.value-press.com/wp-content/uploads/interview_top_image_pakutaso.jpg',
   ];
 
   @override
