@@ -39,18 +39,19 @@ class _FeedPageState extends State<FeedPage> {
                   ),
                   const SizedBox(width: 10),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
                         'instagram',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                          fontSize: 14,
                         ),
                       ),
                       Text('サンディエゴ',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 12,
+                          fontSize: 11,
                         ),
                       ),
                     ],
