@@ -82,7 +82,7 @@ class _FeedPageState extends State<FeedPage> {
                       icon: const Icon(
                         Icons.favorite_border,
                       ),
-                      padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                      padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                       constraints: const BoxConstraints(),
                     ),
                     IconButton(
@@ -90,7 +90,7 @@ class _FeedPageState extends State<FeedPage> {
                       icon: const Icon(
                         Icons.chat_bubble_outline_rounded,
                       ),
-                      padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                      padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                       constraints: const BoxConstraints(),
                     ),
                     IconButton(
@@ -98,7 +98,7 @@ class _FeedPageState extends State<FeedPage> {
                       icon: const Icon(
                         Icons.send_outlined,
                       ),
-                      padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                      padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                       constraints: const BoxConstraints(),
                     ),
                   ],
@@ -126,13 +126,13 @@ class _FeedPageState extends State<FeedPage> {
                     );
                   }).toList(),
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(
                     Icons.bookmark_border,
                   ),
-                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                   constraints: const BoxConstraints(),
                 ),
               ],

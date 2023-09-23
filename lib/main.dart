@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
 
   final _pageWidgets = [
-    FeedPage(),
+    const FeedPage(),
     MyPage(),
     // CarouselDemo(),
   ];
