@@ -8,6 +8,14 @@ class MyPage extends StatelessWidget {
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoSuexQoraIJ3Xc8Qde7Y_A-7v7vfwWxveA&usqp=CAU',
     'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg',
     'https://news.value-press.com/wp-content/uploads/interview_top_image_pakutaso.jpg',
+    'https://images.unsplash.com/photo-1694339251938-4f3309f582da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoSuexQoraIJ3Xc8Qde7Y_A-7v7vfwWxveA&usqp=CAU',
+    'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg',
+    'https://news.value-press.com/wp-content/uploads/interview_top_image_pakutaso.jpg',
+    'https://images.unsplash.com/photo-1694339251938-4f3309f582da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoSuexQoraIJ3Xc8Qde7Y_A-7v7vfwWxveA&usqp=CAU',
+    'https://www.pakutaso.com/shared/img/thumb/kaigoIMGL8113.jpg',
+    'https://news.value-press.com/wp-content/uploads/interview_top_image_pakutaso.jpg',
   ];
 
   @override
@@ -19,17 +27,17 @@ class MyPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Image.network(
-                    'https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/2wPYyq9Ejn4.png',
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png',
                     width: 60,
                     height: 60,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
-                    children: [
+                    children: const [
                       Text(
                         '7,041',
                         style: TextStyle(
@@ -37,14 +45,12 @@ class MyPage extends StatelessWidget {
                           fontSize: 16,
                         ),
                       ),
-                      Text(
-                        '投稿',
-                      ),
+                      Text('投稿'),
                     ],
                   ),
                   const SizedBox(width: 16),
                   Column(
-                    children: [
+                    children: const [
                       Text(
                         '4.6億',
                         style: TextStyle(
@@ -57,7 +63,7 @@ class MyPage extends StatelessWidget {
                   ),
                   const SizedBox(width: 16),
                   Column(
-                    children: [
+                    children: const [
                       Text(
                         '99',
                         style: TextStyle(
@@ -75,7 +81,7 @@ class MyPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     'Instagram',
                     style: TextStyle(
@@ -108,17 +114,17 @@ class MyPage extends StatelessWidget {
                         Expanded(
                           child: OutlinedButton(
                             onPressed: () {},
-                            child: Text(
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                            ),
+                            child: const Text(
                               'フォロー中',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
-                              ),
-                            ),
-                            style: OutlinedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4),
                               ),
                             ),
                           ),
@@ -127,7 +133,11 @@ class MyPage extends StatelessWidget {
                         Expanded(
                           child: OutlinedButton(
                             onPressed: () {},
-                            child: Text(
+                            style: OutlinedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4),
+                            )),
+                            child: const Text(
                               'メッセージ',
                               style: TextStyle(
                                 color: Colors.black,
@@ -135,27 +145,21 @@ class MyPage extends StatelessWidget {
                                 fontSize: 12,
                               ),
                             ),
-                            style: OutlinedButton.styleFrom(
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        OutlinedButton(
+                          onPressed: () {},
+                          style: OutlinedButton.styleFrom(
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4),
-                              ),
-                            ),
+                            borderRadius: BorderRadius.circular(4),
+                          )),
+                          child: const Icon(
+                            Icons.keyboard_arrow_down,
+                            color: Colors.black,
                           ),
                         ),
                       ],
-                    ),
-                  ),
-                  const SizedBox(width: 4),
-                  OutlinedButton(
-                    onPressed: () {},
-                    child: Icon(
-                      Icons.keyboard_arrow_down,
-                      color: Colors.black,
-                    ),
-                    style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
-                      ),
                     ),
                   ),
                 ],
