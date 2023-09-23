@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-final List<String> imgList = [
-  'https://plus.unsplash.com/premium_photo-1690366917352-3bd8bc0a0761?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',
-  'https://images.unsplash.com/photo-1638959773166-cee8ec38a2ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1915&q=80',
-  'https://images.unsplash.com/photo-1694401682625-8d2a8c6b91cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',
-];
-
 class FeedPage extends StatefulWidget {
   const FeedPage({super.key});
 
@@ -19,6 +13,54 @@ class FeedPage extends StatefulWidget {
 class _FeedPageState extends State<FeedPage> {
   int _current = 0;
   final CarouselController _controller = CarouselController();
+
+  final List<String> imgList = [
+    'https://plus.unsplash.com/premium_photo-1690366917352-3bd8bc0a0761?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',
+    'https://images.unsplash.com/photo-1638959773166-cee8ec38a2ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1915&q=80',
+    'https://images.unsplash.com/photo-1694401682625-8d2a8c6b91cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',
+  ];
+
+  List<Widget> imageSliders() {
+    return imgList
+        .map((item) => Container(
+              margin: const EdgeInsets.all(5.0),
+              child: ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+                  child: Stack(
+                    children: <Widget>[
+                      Image.network(item, fit: BoxFit.cover, width: 600.0),
+                      Positioned(
+                        bottom: 0.0,
+                        left: 0.0,
+                        right: 0.0,
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color.fromARGB(200, 0, 0, 0),
+                                Color.fromARGB(0, 0, 0, 0)
+                              ],
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                            ),
+                          ),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 20.0),
+                          child: Text(
+                            'No. ${imgList.indexOf(item)} image',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )),
+            ))
+        .toList();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +103,7 @@ class _FeedPageState extends State<FeedPage> {
               ),
             ),
             CarouselSlider(
-              items: imageSliders,
+              items: imageSliders(),
               carouselController: _controller,
               options: CarouselOptions(
                   autoPlay: false,
@@ -175,43 +217,3 @@ class _FeedPageState extends State<FeedPage> {
     );
   }
 }
-
-final List<Widget> imageSliders = imgList
-    .map((item) => Container(
-          margin: const EdgeInsets.all(5.0),
-          child: ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-              child: Stack(
-                children: <Widget>[
-                  Image.network(item, fit: BoxFit.cover, width: 600.0),
-                  Positioned(
-                    bottom: 0.0,
-                    left: 0.0,
-                    right: 0.0,
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Color.fromARGB(200, 0, 0, 0),
-                            Color.fromARGB(0, 0, 0, 0)
-                          ],
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter,
-                        ),
-                      ),
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10.0, horizontal: 20.0),
-                      child: Text(
-                        'No. ${imgList.indexOf(item)} image',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              )),
-        ))
-    .toList();
