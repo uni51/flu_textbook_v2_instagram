@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/pages/feed_page.dart';
-import 'package:instagram/pages/my_page.dart';
+
+import 'pages/feed_page.dart';
+import 'pages/my_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,13 +10,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -33,11 +34,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
-
   final _pageWidgets = [
-    FeedPage(),
+    const FeedPage(),
     MyPage(),
-    // CarouselDemo(),
   ];
 
   @override
